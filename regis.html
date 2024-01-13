@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="login.css">
+</head>
+<style>
+    body{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,rgb(4, 26, 39) 0%,rgb(45, 88, 153) 50%,rgb(4, 1, 20) 100%);
+    font-family: 'Poppins', sans-serif;
+    }
+
+    re{
+        text-align: center;
+        background-color:white;
+        width: 30%;
+    }
+    form{
+        background: linear-gradient(90deg,rgb(55, 149, 222) 0%,rgb(135, 182, 228) 50%,rgb(55, 149, 222) 100%);
+        align-items: center;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 25px;
+  border: 2px solid #151614;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+    }
+    ali{
+        text-align:center;
+  margin-left: auto;
+  margin-right: auto;
+    }
+</style>
+
+<body>
+<div class="form">
+
+    <p class="c">Create your Account</p>
+
+    <img src="registeravatar.png" alt="avatar" style="height: 100px;">
+    <br>
+    <br>
+    <h3>To continue using our website</h3>
+    <br>
+    <form method="POST" action="Hometp.html">
+        
+      <label for="uname"><b>Username</b></label><br>
+      <input type="text" placeholder="Enter Username" name="userid">
+
+      <br><br>
+
+      <label for="psw"><b>Password</b></label><br>
+      <input type="password" placeholder="Enter Password" name="pwd">
+      <br>
+      <input type="password" placeholder="Confirm" name="pwd1">
+
+      <br><br>
+
+      <label for="email"><b>Enter your Email address:</b></label><br>
+      <input type="email" placeholder="Enter Email Address" id="email" name="email">
+
+      <br><br>
+      <label for="add"><b>Enter Address:</b></label><br>
+      <input type="text" placeholder="Enter Address" name="add">
+
+      <br><br>
+      <label for="uname"><b>Gender</b></label><br>
+      <input type="text" placeholder="Enter Gender" name="gen">
+      <br><br>
+
+      <label for="bday"><b>Select your Birthdate:</b></label><br>
+      <input type="datetime-local" name="date">
+
+      <br>
+      <br>
+      <input type="submit" name="submit" value="Submit" />
+      <br><br>
+      <br>
+    
+    </form>
+
+  </div>
+</body>
+</html>

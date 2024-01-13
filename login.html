@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="form login">
+      <h2 class="redgamers">LOGIN</h2>
+      <label>
+        <span>Email</span>
+       <input class="placeholder"type="email"  id="Email" name="email" id="input">
+      </label>
+      <label>
+        <span>Password</span>
+       <input class="placeholder" type="password" id="password" name="password" id="input">
+      </label>
+      <button onclick="myFunction()" class="enviar" type="button">Enter</button>
+
+    </div>
+
+    <div class="slide-cadastro">
+      <div class="img">
+        <div class="img-text m-up">
+          <h2>Not Yet Registered?</h2>
+          <p>Join Us</p>
+        </div>
+        <div class="img-text m-in">
+          <h2>Already Have an Account?</h2>
+        </div>
+        <div class="img-btn">
+          <span class="m-up">Register</span>
+          <span class="m-in">Login</span>
+        </div>
+      </div>
+      <div class="form cadastro">
+        <h2>Create New Account</h2>
+        <label>
+          <span>Name</span>
+          <input type="text" id="nome" class="placeholder">
+        </label>
+        <label>
+          <span>E-mail</span>
+          <input type="email" id="mailnovo" class="placeholder">
+        </label>
+        <label>
+          <span>Password</span>
+          <input class="placeholder" type="password" id="passwordnovo">
+        </label>
+        <label>
+          <span>Confirm Password</span>
+          <input type="password" id="confpasswordnovo" class="placeholder">
+        </label>
+        <button onclick="myFunction()" type="button" class="enviar">Submit</button>
+      </div>
+    </div>
+  </div>
+
+<script type="text/javascript"> 
+   document.querySelector('.img-btn').addEventListener('click', function()
+	{
+		document.querySelector('.wrapper').classList.toggle('s-signup')
+	}
+
+);
+
+function myFunction() {
+    document.getElementById("Email").placeholder = "Required Field";
+    document.getElementById("nome").placeholder = "Required Field";
+    document.getElementById("password").placeholder = "Required Field";
+    document.getElementById("mailnovo").placeholder = "Required Field";
+    document.getElementById("passwordnovo").placeholder = "Required Field";
+    document.getElementById("confpasswordnovo").placeholder = "Required Field";
+  };
+
+</script>
+</body>
+</html>
+
+

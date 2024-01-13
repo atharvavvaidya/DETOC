@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+
+<head>
+    <meta charset="utf-8">
+    <title>Sidebar Menu with sub-menu | CodingNepal</title>
+    <link rel="stylesheet" href="tpmain.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <style>
+        .button {
+            padding: 10px 20px;
+            background-color: rgb(22, 24, 24);
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mainb">
+
+        <div class="btn">
+            <span class="fas fa-bars"></span>
+        </div>
+        <nav class="sidebar">
+            <div class="text">
+                Disease Detector
+            </div>
+            <ul>
+                <li><a href="tpmain.html">Introduction</a></li>
+                <li><a href="preque.html">Priliminary Questions</a></li>
+                <li><a href="basicque.html">Basic Questions</a></li>
+                <li class="active"><a href="symque.html">Symptom Questions</a></li>
+        </nav>
+        <br><br>
+        <div class="screen">
+            <img src="intoicon.png" style="width: 300px;">
+            <p style="font-size: 50px;">Symptom Questions</p>
+            <br><br>
+            <div class="info">
+
+                <form action="" name="myform">
+                    <p><b>Enter Your Symptoms</b></p>
+
+                    <p class="bc">Enter your Temperature</p>
+
+                    <input id="text9" placeholder="&#176C" required>
+                    <br><br>
+                    <p class="bc">Enter your Oxygen Percent</p>
+
+                    <input id="text8" placeholder="O%" required>
+                    <br><br>
+                    <p class="bc">Enter your Blood Pressure</p>
+                    <input id="tex" placeholder="Optional">
+                    <br><br>
+
+                    <label for="sym1"><b>Enter Your 1st Symptom</b></label>
+                    <div class="ai"><input type="radio" name="sym1" id="sym1" value="rash">Butterfly Rash&ensp;
+                        <input type="radio" name="sym1" id="sym1" value="taste">Tastelessnes&ensp;
+                        <input type="radio" name="sym1" id="sym1" value="join">Joint Pain&ensp;
+                        <input type="radio" name="sym1" id="sym1" value="sus">Excessive Urination&ensp;
+                        <input type="radio" name="sym1" id="sym1" value="night">Night Sweats
+                    </div>
+                    <br>
+                    <label for="sym2"><b>Enter Your 2nd Symptom</b></label>
+                    <div class="ai"><input type="radio" name="sym2" id="sym2" value="hairloss">Hair Loss&ensp;
+                        <input type="radio" name="sym2" id="sym2" value="breath">Breathlessnes&ensp;
+                        <input type="radio" name="sym2" id="sym2" value="itch">Itching&ensp;
+                        <input type="radio" name="sym2" id="sym2" value="vision">Blurred Vision&ensp;
+                        <input type="radio" name="sym2" id="sym2" value="bcough">Bloody Cough
+                    </div>
+                    <br>
+                    <label for="sym3"><b>Enter Your 3rd Symptom</b></label>
+                    <div class="ai"><input type="radio" name="sym3" id="sym3" value="eye">Red Eyes&ensp;
+                        <input type="radio" name="sym3" value="thirst" id="sym3">Excessive Thirst&ensp;
+                        <input type="radio" name="sym3" value="weight" id="sym3">Weight Loss&ensp;
+                        <input type="radio" name="sym3" value="water" id="sym3">Water Retention&ensp;
+                        <input type="radio" name="sym3" value="bleed" id="sym3">Skin Bleeding
+                    </div>
+                    <br>
+
+
+                    <input type="submit" value="Result" style="padding: 10px 20px;" onclick="javascript:validate()" />
+                </form>
+
+
+
+            </div>
+            <br>
+         
+        </div>
+        </section>
+
+        <script>
+
+          
+            
+            function validate() {
+                var selectedOption1 = $("input:radio[name=sym1]:checked").val()
+                var selectedOption2 = $("input:radio[name=sym2]:checked").val()
+                var selectedOption3 = $("input:radio[name=sym3]:checked").val()
+                
+                if ( selectedOption1 == "rash" &&selectedOption2 == "hairloss" && selectedOption3 == "weight") {
+                    location.href = "rlupus.html";
+                }
+                else if(selectedOption1 == "taste" &&selectedOption2 == "breath" && selectedOption3 == "eye")
+                {
+                    location.href = "rcovid.html";
+                }
+                else if(selectedOption1 == "sus" &&selectedOption2 == "vision" && selectedOption3 == "thirst")
+                {
+                    location.href = "rdie.html";
+                }
+                else if(selectedOption1 == "night" &&selectedOption2 == "bcough" && selectedOption3 == "water")
+                {
+                    location.href = "rtb.html";
+                }
+                else if(selectedOption1 == "join" &&selectedOption2 == "itch" && selectedOption3 == "bleed")
+                {
+                    location.href = "rdengue.html";
+                }
+                else {
+                    alert("Detection failed");
+                    location.href = "fail.html";
+                }
+                
+                
+            }
+
+
+
+            $('.btn').click(function () {
+                $(this).toggleClass("click");
+                $('.sidebar').toggleClass("show");
+            });
+            $('.feat-btn').click(function () {
+                $('nav ul .feat-show').toggleClass("show");
+                $('nav ul .first').toggleClass("rotate");
+            });
+            $('.serv-btn').click(function () {
+                $('nav ul .serv-show').toggleClass("show1");
+                $('nav ul .second').toggleClass("rotate");
+            });
+            $('nav ul li').click(function () {
+                $(this).addClass("active").siblings().removeClass("active");
+            });
+
+            function sliderChange(val) {
+                document.getElementById('sliderVal').innerHTML = val;
+            }
+
+
+
+
+        </script>
+
+
+</body>
+
+</html>

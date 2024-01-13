@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Register Page</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<script src="js/bootstrap.js"></script>
+</head>
+<style>
+body  {background-image: url('bg3.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;}
+
+.c {text-align: center; font-size:250%;font-weight: bold; font-family: "Lucida Console", "Courier New", monospace; color:white;}
+
+h3{text-align:center;font-size:150%;font-weight: bold; font-family: "Lucida Console", "Courier New", monospace;color:white;}
+
+.form{
+ text-align: center;
+ background: hsl(213, 100%, 27%,0.37);
+ margin-left:250px;
+ margin-right:250px;
+ font-family: "Lucida Console", "Courier New", monospace;
+ color:white;
+}
+
+label{
+  font-size:150%;
+}
+
+input[type=text], input[type=password] {
+  width: 18%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+input[type=email] {
+  width: 22%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+input[type=datetime-local]{
+  width: 18%;
+  padding: 12px 15px;
+  margin: 8px 0;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+input[type=file]{
+  width: 11%;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+input[type=submit], input[type=reset]{
+  padding: 8px 16px;
+  cursor: pointer;}
+
+select {  width: 18%;
+  padding: 12px 15px;
+  margin: 8px 0;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+textarea{
+  padding: 12px 20px;
+  margin: 8px 0;
+}
+
+.left{text-align:center;}
+
+a:link, a:visited {
+  background-color: black;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+img{
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+<head>
+<title>Register</title>
+</head>
+
+<body>
+<div class="left" >
+	<a class="btn btn-dark" href="Hometp.htm" role="button">Home</a>
+	<a class="btn btn-dark" href="login.html" role="button">Login</a>
+	<a class="btn btn-dark" href="Register.html" role="button">Register</a>
+  <a class="btn btn-dark" href="main.html" role="button">Detector</a>
+	<a class="btn btn-dark" href="Doctorsi.html" role="button">Doctors</a>
+	<a class="btn btn-dark" href="contact.html" role="button">Contact Us</a>
+  <a class="btn btn-danger" href="tel:+917304307076" role="button">Emergency</a>
+
+<br>
+<br>
+<div class="form">
+
+<p class="c">Create your Account</p>
+
+<img src="registeravatar.png" alt="avatar">
+
+<h3>To continue using our website</h3>
+
+<form method="POST" action="Hometp.html">
+
+     <label for="uname"><b>Username</b></label><br>
+     <input type = "text" placeholder="Enter Username" name = "userid">
+
+<br><br>
+
+    <label for="psw"><b>Password</b></label><br>
+    <input type = "password" placeholder="Enter Password" name = "pwd">
+    <input type = "password" placeholder="Confirm" name = "pwd1">
+
+<br><br>
+
+    <label for="email"><b>Enter your Email address:</b></label><br>
+    <input type="email" placeholder="Enter Email Address" id="email" name="email">
+
+<br><br>
+    <label for="add"><b>Enter Address:</b></label><br>
+    <textarea rows ="6" cols="40" name="address" placeholder="Enter Address"></textarea>
+
+<br><br>
+
+    <label for="gender"><b>Select your Gender:</b></label><br><br>
+    <div class="a i"><input type= "radio" name="gender" value="male">Male
+    <input type= "radio" name="gender" value="female">Female
+    <input type= "radio" name="gender" value="other">Other</div>
+
+<br><br>
+
+    <label for="bday"><b>Select your Birthdate:</b></label><br>
+    <input type ="datetime-local" name="date">
+
+<br><br>
+
+    <label for="prof"><b>Select your Profession:</b></label><br><br>
+  <select name= "dropdown">
+    <option value= "Teacher">Teacher</option>
+    <option value= "Electrician">Electrician</option>
+    <option value= "Plumber">Plumber</option>
+    <option value= "Businessman">Businessman</option>
+    <option value= "Other">Other</option>
+  </select>
+
+<br><br>
+
+    <label for="doc"><b>Upload Documents:</b></label><br><br>
+  <select name= "dropdown">
+    <option value= "Aadhar Card" selected>Aadhar Card</option>Aadhar card
+    <option value= "Passsport">Passport</option>
+    <option value= "Pan Card">Pan Card</option></select>
+
+<br>
+
+    <input type ="file" name="fileupload" accept="image/*">
+
+<br><br><br>
+
+    <input type = "submit" name = "submit" value = "Submit" />
+    <input type = "reset" name = "reset" value = "Reset" />
+<br>
+
+</form>
+</div>
+
+</body>
+</html>
