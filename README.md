@@ -1,2 +1,2 @@
 # DETOC
-Disease Detector Design
+Disease Detector Base Design
